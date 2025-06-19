@@ -1,17 +1,23 @@
-body {
-    text-align: center;
+/* Base styles */
+* {
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    text-align: center;
     background-color: #f5f5f5;
     padding: 40px 20px;
     margin: 0;
   }
   
+  /* Title */
   h1 {
     margin-bottom: 30px;
     color: #333;
   }
   
-  .content,
+  /* Input + Add Button Section */
   .column {
     display: grid;
     grid-template-columns: 200px 200px 100px;
@@ -19,14 +25,10 @@ body {
     row-gap: 10px;
     align-items: center;
     justify-content: center;
-    max-width: 600px;
-    margin: auto;
-  }
-  
-  .column {
     margin-bottom: 20px;
   }
   
+  /* Inputs */
   input[type="text"],
   input[type="date"] {
     padding: 10px;
@@ -43,7 +45,8 @@ body {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
   }
   
-  button {
+  /* Add Button */
+  .column button {
     padding: 10px;
     background-color: #007bff;
     color: white;
@@ -54,14 +57,21 @@ body {
     transition: background-color 0.3s ease;
   }
   
-  button:hover {
+  .column button:hover {
     background-color: #0056b3;
   }
   
-  .task-card {
-    display: contents; /* keeps grid layout */
+  /* Task list area */
+  .content {
+    display: grid;
+    grid-template-columns: 200px 200px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
   }
   
+  /* Each task block */
   .task-card div {
     padding: 10px;
     background-color: white;
@@ -69,11 +79,19 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
   
-  .task-card button {
+  /* Delete Button Styling */
+  button .delete-btn {
     background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
-  .task-card button:hover {
+  button.delete-btn:hover {
     background-color: #a71d2a;
   }
   

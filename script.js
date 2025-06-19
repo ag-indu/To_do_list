@@ -8,7 +8,7 @@ let todo = []
                     let {task,date} = todo2[i];
                     todo2list += `<div>${task}</div>
                             <div>${date}</div>
-                           <button onclick="
+                           <button class="delete-btn" onclick="
                               todo2.splice(${i},1);
                               render();
                            ">
