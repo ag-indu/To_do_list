@@ -3,9 +3,9 @@ let todo = []
             let todo2 = [];
             
             function render(){
-                todo2list = '';
-                for(let i =0;i<todo2.length;i++){
-                    let {task,date} = todo2[i];
+                let todo2list = '';
+                todo2.forEach(function(todoObject,i){
+                    let {task,date} = todoObject;
                     todo2list += `<div>${task}</div>
                             <div>${date}</div>
                            <button class="delete-btn" onclick="
@@ -15,7 +15,7 @@ let todo = []
                               Delete
                             </button>
                         `
-                }
+                })
                 document.querySelector('.content').innerHTML = todo2list
             }
 
