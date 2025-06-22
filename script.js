@@ -4,7 +4,7 @@ let todo = []
             
             function render(){
                 let todo2list = '';
-                todo2.forEach(function(todoObject,i){
+                todo2.forEach((todoObject,i)=>{
                     let {task,date} = todoObject;
                     todo2list += `<div>${task}</div>
                             <div>${date}</div>
@@ -27,3 +27,6 @@ let todo = []
                 document.querySelector('.date1').value = '';
                 document.querySelector('.task').value = '';
             }
+
+let addButton = document.querySelector('.add-button');
+addButton.addEventListener('click',toDoList3);
